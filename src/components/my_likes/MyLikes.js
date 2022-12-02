@@ -29,13 +29,10 @@ export default function Timeline() {
 
   useEffect(() => {
     setIsLoading(true);
-    const request = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/liked`,
-      config
-    );
+    const request = axios.get(`http://localhost:4000/likes`, config);
 
     const trendingRequest = axios.get(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/hashtags/trending",
+      "http://localhost:4000/hashtags/trending",
       config
     );
 
@@ -57,9 +54,9 @@ export default function Timeline() {
       setHashtags([...newArray]);
     });
 
-    trendingRequest.catch((error) => {
-      alert("Houve uma falha ao obter as hashtags");
-    });
+    // trendingRequest.catch((error) => {
+    //   alert("Houve uma falha ao obter as hashtags");
+    // });
   }, render);
 
   function logout() {
@@ -84,7 +81,7 @@ export default function Timeline() {
       },
     };
     const requestUsers = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/search?username=${userSearched}`,
+      `http://localhost:4000/users/search?username=${userSearched}`,
       searchConfig
     );
     requestUsers.then((responseUsers) => {

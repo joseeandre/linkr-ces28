@@ -30,12 +30,12 @@ export default function Timeline() {
   useEffect(() => {
     setIsLoading(true);
     const request = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/${user.id}/posts`,
+      `http://localhost:4000/users/${user.id}/posts`,
       config
     );
 
     const trendingRequest = axios.get(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/hashtags/trending",
+      "http://localhost:4000/hashtags/trending",
       config
     );
 
@@ -84,7 +84,7 @@ export default function Timeline() {
       },
     };
     const requestUsers = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/search?username=${userSearched}`,
+      `http://localhost:4000/users/search?username=${userSearched}`,
       searchConfig
     );
     requestUsers.then((responseUsers) => {

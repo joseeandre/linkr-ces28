@@ -75,14 +75,14 @@ export default function Post(props) {
       }
     }
     const requestComments = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}/comments`,
+      `http://localhost:4000/posts/${id}/comments`,
       config
     );
     requestComments.then((response) => {
       setComments(response.data);
     });
     const requestFollowers = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/follows`,
+      `http://localhost:4000/users/follows`,
       config
     );
     requestFollowers.then((response) => {
@@ -97,7 +97,7 @@ export default function Post(props) {
   function likePost() {
     if (!isLikedByMe) {
       const likeRequest = axios.post(
-        `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}/like`,
+        `http://localhost:4000/posts/${id}/like`,
         null,
         config
       );
@@ -108,7 +108,7 @@ export default function Post(props) {
       });
     } else if (isLikedByMe) {
       const dislikeRequest = axios.post(
-        `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}/dislike`,
+        `http://localhost:4000/posts/${id}/dislike`,
         null,
         config
       );
@@ -133,7 +133,7 @@ export default function Post(props) {
       user: userLogged,
     };
     const request = axios.post(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}/comment`,
+      `http://localhost:4000/posts/${id}/comment`,
       data,
       config
     );
@@ -152,7 +152,7 @@ export default function Post(props) {
     setConfirmButtonEnable(false);
     setReturnButtonEnable(false);
     setIsLoading(true);
-    const url = `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}`;
+    const url = `http://localhost:4000/posts/${id}`;
     const request = axios.delete(url, props.config);
     request.then((response) => {
       setModalDeleteOpen(false);
@@ -175,7 +175,7 @@ export default function Post(props) {
     setConfirmButtonEnable(false);
     setReturnButtonEnable(false);
     setIsLoading(true);
-    const url = `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/posts/${id}/share`;
+    const url = `http://localhost:4000/posts/${id}/share`;
     const request = axios.post(url, null, props.config);
     request.then((response) => {
       setModalShareOpen(false);

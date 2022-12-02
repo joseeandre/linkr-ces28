@@ -16,8 +16,8 @@ export default function SignIn() {
   const { token, setToken } = useContext(TokenContext);
   const history = useHistory();
 
-  if(localStorage.getItem('token')){
-    history.push('/timeline');
+  if (localStorage.getItem("token")) {
+    history.push("/timeline");
   }
 
   function login(event) {
@@ -32,17 +32,14 @@ export default function SignIn() {
 
     setBlock(true);
 
-    const url =
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/sign-in";
+    const url = "http://localhost:4000/sign-in";
     const data = { email: email, password: password };
-
 
     const request = axios.post(url, data);
 
-
     request.then((response) => {
-      localStorage.setItem('token', response.data.token);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
       setUser(response.data.user);
       setToken(response.data.token);
       setBlock(false);

@@ -39,17 +39,17 @@ export default function User() {
   useEffect(() => {
     setIsLoading(true);
     const request = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/${params.id}/posts`,
+      `http://localhost:4000/users/${params.id}/posts`,
       config
     );
 
     const userRequest = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/${params.id}`,
+      `http://localhost:4000/users/${params.id}`,
       config
     );
 
     const trendingRequest = axios.get(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/hashtags/trending",
+      "http://localhost:4000/hashtags/trending",
       config
     );
 
@@ -81,14 +81,14 @@ export default function User() {
       setHashtags([...newArray]);
     });
 
-    trendingRequest.catch((error) => {
-      alert("Houve uma falha ao obter as hashtags");
-    });
+    // trendingRequest.catch((error) => {
+    //   alert("Houve uma falha ao obter as hashtags");
+    // });
   }, render);
   useEffect(() => {
     setIsLoadingFollow(true);
     const followedUsersRequest = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/follows`,
+      `http://localhost:4000/users/follows`,
       config
     );
     followedUsersRequest.then((response) => {
@@ -118,7 +118,7 @@ export default function User() {
     setIsLoadingFollow(true);
     if (!isFollowedByMe) {
       const followRequest = axios.post(
-        `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/${userId}/follow`,
+        `http://localhost:4000/users/${userId}/follow`,
         null,
         config
       );
@@ -130,7 +130,7 @@ export default function User() {
       });
     } else if (isFollowedByMe) {
       const unfollowRequest = axios.post(
-        `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/${userId}/unfollow`,
+        `http://localhost:4000/users/${userId}/unfollow`,
         null,
         config
       );
@@ -156,7 +156,7 @@ export default function User() {
       },
     };
     const requestUsers = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/users/search?username=${userSearched}`,
+      `http://localhost:4000/users/search?username=${userSearched}`,
       searchConfig
     );
     requestUsers.then((responseUsers) => {

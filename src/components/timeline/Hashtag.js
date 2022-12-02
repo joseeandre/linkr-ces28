@@ -30,12 +30,12 @@ export default function Hashtag() {
   useEffect(() => {
     setIsLoading(true);
     const request = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/hashtags/${params.hashtag}/posts`,
+      `http://localhost:4000/hashtags/${params.hashtag}/posts`,
       config
     );
 
     const trendingRequest = axios.get(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/linkr/hashtags/trending",
+      "http://localhost:4000/hashtags/trending",
       config
     );
 
@@ -48,18 +48,18 @@ export default function Hashtag() {
       setIsLoading(false);
     });
 
-    request.catch((error) => {
-      alert("Houve uma falha ao obter os posts, por favor atualize a página");
-    });
+    // request.catch((error) => {
+    //   alert("Houve uma falha ao obter os posts, por favor atualize a página");
+    // });
 
     trendingRequest.then((response) => {
       const newArray = response.data.hashtags;
       setHashtags([...newArray]);
     });
 
-    trendingRequest.catch((error) => {
-      alert("Houve uma falha ao obter as hashtags");
-    });
+    // trendingRequest.catch((error) => {
+    //   alert("Houve uma falha ao obter as hashtags");
+    // });
   }, render);
 
   function logout() {
