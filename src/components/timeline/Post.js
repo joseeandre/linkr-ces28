@@ -375,7 +375,7 @@ const modalStyle = {
 
 const ModalText = styled.h1`
   color: #ffffff;
-  font-family: "Lato";
+  font-family: "Kulim Park";
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
@@ -387,9 +387,9 @@ const ModalReturn = styled.button`
   margin-top: 60px;
   border: none;
   background-color: white;
-  color: #1877f2;
+  color: #57705c;
   margin-left: 150px;
-  font-family: "Lato";
+  font-family: "Kulim Park";
   cursor: pointer;
 `;
 const ModalConfirm = styled.button`
@@ -398,9 +398,9 @@ const ModalConfirm = styled.button`
   border-radius: 5px;
   margin-top: 40px;
   border: none;
-  background-color: #1877f2;
+  background-color: #57705c;
   color: white;
   margin-left: 40px;
-  font-family: "Lato";
+  font-family: "Kulim Park";
   cursor: pointer;
 `;

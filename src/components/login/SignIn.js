@@ -5,6 +5,8 @@ import Loader from "react-loader-spinner";
 import axios from "axios";
 import UserContext from "../../contexts/UserContext";
 import TokenContext from "../../contexts/TokenContext";
+import img_login from "../../imgs/social-media-1.png";
+import styled from "styled-components";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -56,6 +58,7 @@ export default function SignIn() {
 
   return (
     <Container>
+      <ImgStyle src={img_login} alt="" />
       <div className="logo">
         <h1>linkr</h1>
         <h2>save, share and discover the best links on the web</h2>
@@ -83,7 +86,7 @@ export default function SignIn() {
               visible={true}
             ></Loader>
           ) : (
-            "Log in"
+            "login"
           )}
         </button>
         <Link to="/sign-up">
@@ -93,3 +96,10 @@ export default function SignIn() {
     </Container>
   );
 }
+
+const ImgStyle = styled.img`
+  bottom: -2vh;
+  left: 28vh;
+  position: fixed;
+  width: 60vh;
+`;

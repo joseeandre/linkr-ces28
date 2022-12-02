@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #333333;
+  background-color: #eff4f0;
   min-height: 100vh;
   color: white;
   display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
     padding-right: 10px;
     width: 100%;
     height: 72px;
-    background-color: #151515;
+    background-color: #91a997;
     user-select: none;
   }
   .profile {
@@ -42,6 +42,7 @@ const Container = styled.div`
     width: 100%;
     height: 45px;
     background-color: #ffffff;
+    letter-spacing: 1px;
     outline: none;
   }
   .search-users {
@@ -50,7 +51,7 @@ const Container = styled.div`
     width: 100%;
     max-height: 250px;
     overflow-y: hidden;
-    background-color: #e7e7e7;
+    background-color: #eff4f0;
     border-radius: 0px 0px 8px 8px;
   }
   .search-user {
@@ -135,7 +136,8 @@ const Container = styled.div`
     justify-content: space-between;
     padding: 16px;
     width: 611px;
-    background: #171717;
+    background: #6c9174;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     position: relative;
   }
@@ -145,7 +147,7 @@ const Container = styled.div`
     height: 109px;
     right: 0;
     top: 72px;
-    background: #171717;
+    background: #91a997;
     border-radius: 0px 0px 20px 20px;
   }
   .logout {
@@ -186,10 +188,11 @@ const Container = styled.div`
     margin-bottom: 10px;
   }
   .comments-box {
-    background-color: #1e1e1e;
+    background-color: #91a997;
     width: 611px;
     margin-top: -12px;
     border-radius: 0px 0px 16px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-top: 10px;
   }
   .comment-user {
@@ -216,7 +219,7 @@ const Container = styled.div`
   .comment-user h2 {
     font-family: "Lato";
     font-size: 14px;
-    color: #acacac;
+    color: #f3f3f3;
     font-weight: 700;
     margin: 0;
     text-overflow: ellipsis;
@@ -254,7 +257,7 @@ const Container = styled.div`
     input {
       width: 510px;
       height: 40px;
-      background-color: #252525;
+      background-color: #eff4f0;
       border-radius: 8px;
     }
     .send {
@@ -266,7 +269,7 @@ const Container = styled.div`
   .trending {
     width: 301px;
     height: 406px;
-    background: #171717;
+    background: #91a997;
     border-radius: 16px;
     user-select: none;
   }
@@ -279,13 +282,14 @@ const Container = styled.div`
     text-decoration: none;
   }
   h1 {
-    font-family: "Passion One", cursive;
+    font-family: "Caveat", cursive;
     font-size: 49px;
     color: white;
     user-select: none;
   }
   h2 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Kulim Park", sans-serif;
+    color: #91a997;
     font-size: 43px;
     width: 937px;
     word-break: keep-all;
@@ -298,7 +302,7 @@ const Container = styled.div`
     font-weight: normal;
     font-size: 17px;
     line-height: 20px;
-    color: #b7b7b7;
+    color: white;
     margin-top: 7px;
     margin-bottom: 14px;
   }
@@ -310,7 +314,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 503px;
-    border: 1px solid #4d4d4d;
+    border: 1px solid #405444;
     box-sizing: border-box;
     border-radius: 11px;
     padding-left: 19.31px;
@@ -330,7 +334,7 @@ const Container = styled.div`
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    color: #cecece;
+    color: white;
     width: 250px;
     margin-top: 10px;
   }
@@ -341,7 +345,7 @@ const Container = styled.div`
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
-    color: #9b9595;
+    color: #405444;
     width: 303px;
     margin-top: 5px;
     flex-wrap: wrap;
@@ -384,16 +388,16 @@ const Container = styled.div`
     margin-bottom: 5px;
     border-radius: 5px;
     font-family: "Lato", sans-serif;
-    color: #949494;
+    color: #57705c;
     padding-left: 13px;
     font-size: 15px;
     border: none;
-    background: #efefef;
+    background: #eff4f0;
   }
   button {
     width: 112px;
     height: 31px;
-    background-color: #1877f2;
+    background-color: #91a997;
     border: none;
     border-radius: 5px;
     color: white;
@@ -401,7 +405,7 @@ const Container = styled.div`
     font-size: 14px;
   }
   .trending-title {
-    font-family: "Oswald";
+    font-family: "Kulim Park";
     font-style: normal;
     font-weight: bold;
     font-size: 27px;
@@ -413,7 +417,7 @@ const Container = styled.div`
   .trending-bar {
     width: 100%;
     height: 1px;
-    background-color: #484848;
+    background-color: white;
     margin: 12px 0px;
   }
   .hashtags {
@@ -448,7 +452,7 @@ const Container = styled.div`
     justify-content: center;
     width: 269px;
     height: 35px;
-    background: #252525;
+    background: #eff4f0;
     border-radius: 8px;
     margin-right: 16px;
     margin-top: 15px;

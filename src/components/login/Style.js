@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #151515;
+  background-color: #91a997;
   height: 100vh;
   color: white;
   display: flex;
@@ -15,13 +15,18 @@ const Container = styled.div`
     height: 100vh;
   }
   h1 {
-    font-family: "Passion One", cursive;
-    font-size: 70px;
+    color: #57705c;
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 140px;
   }
   h2 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Kulim Park", sans-serif;
     font-size: 30px;
-    width: 440px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    width: 500px;
     word-break: break-word;
   }
   form {
@@ -31,33 +36,49 @@ const Container = styled.div`
     align-items: center;
     height: 100vh;
     width: 40%;
-    background-color: #333333;
+    background-color: #57705c;
   }
   input {
     width: 80%;
     height: 50px;
-    margin-bottom: 13px;
+    margin-bottom: 15px;
     border-radius: 6px;
-    font-family: "Oswald", sans-serif;
+    font-family: "Kulim Park", sans-serif;
     color: #9f9f9f;
     padding-left: 17px;
     font-size: 18px;
     border: none;
+    :hover {
+      background-color: #eff4f0;
+      transition-duration: 0.5s;
+    }
+    :focus {
+      background-color: #eff4f0;
+    }
   }
   button {
     width: 80%;
     height: 50px;
-    background-color: #1877f2;
+    background-color: #91a997;
     border: none;
     border-radius: 6px;
+    margin-top: 10px;
     color: white;
-    font-family: "Oswald", sans-serif;
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 600;
     font-size: 18px;
+    letter-spacing: 3px;
+    :hover {
+      background-color: white;
+      color: #57705c;
+      transition-duration: 1s;
+    }
   }
   h3 {
     font-family: "Lato", sans-serif;
     color: white;
-    margin-top: 13px;
+    margin-top: 40px;
+    letter-spacing: 3px;
     text-decoration: underline;
   }
 
